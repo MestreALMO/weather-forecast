@@ -12,30 +12,32 @@ export const ImgBackground = () => {
   useEffect(() => {
     async function api() {
       const response = await axios.get("/api/imgBackground");
-      console.log(response);
       setBgData(response.data);
     }
 
     api();
   }, []);
 
-  return <>
-    {bgData ? (
-      <>
-        <div className={`${styles.backgroundImage}`}>
-          <Image
-            src={bgData.imageUrl}
-            alt={bgData.imageTitle}
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover"
-            }} />
-          <p>{bgData.imageTitle}</p>
-        </div>
-      </>
-    ) : (
-      <p>Carregando...</p>
-    )}
-  </>;
+  return (
+    <>
+      {bgData ? (
+        <>
+          <div className={`${styles.backgroundImage}`}>
+            <Image
+              src={bgData.imageUrl}
+              alt={bgData.imageTitle}
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+            <p>{bgData.imageTitle}</p>
+          </div>
+        </>
+      ) : (
+        <p>Carregando...</p>
+      )}
+    </>
+  );
 };
