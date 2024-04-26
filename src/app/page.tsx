@@ -13,9 +13,12 @@ export default function Home() {
         <Image
           className={styles.divInputIcon}
           alt="Compass icon"
-          layout="responsive"
           src={IconCompass}
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
         <input
           className={styles.divInputMain}
           placeholder="City, State/Province"

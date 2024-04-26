@@ -19,23 +19,23 @@ export const ImgBackground = () => {
     api();
   }, []);
 
-  return (
-    <>
-      {bgData ? (
-        <>
-          <div className={`${styles.backgroundImage}`}>
-            <Image
-              src={bgData.imageUrl}
-              alt={bgData.imageTitle}
-              layout="fill"
-              objectFit="cover"
-            />
-            <p>{bgData.imageTitle}</p>
-          </div>
-        </>
-      ) : (
-        <p>Carregando...</p>
-      )}
-    </>
-  );
+  return <>
+    {bgData ? (
+      <>
+        <div className={`${styles.backgroundImage}`}>
+          <Image
+            src={bgData.imageUrl}
+            alt={bgData.imageTitle}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
+          <p>{bgData.imageTitle}</p>
+        </div>
+      </>
+    ) : (
+      <p>Carregando...</p>
+    )}
+  </>;
 };
