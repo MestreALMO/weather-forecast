@@ -6,20 +6,3 @@
   padding: 6rem;
   min-height: 100vh;
 }
-
-.divInput {
-  background-color: var(--inputBackgroundClr);
-  display: flex;
-  padding: 14px 10px;
-}
-
-.divInputIcon {
-  max-height: 40px;
-  padding-right: 10px;
-}
-
-.divInputMain {
-  background-color: transparent;
-  border-color: transparent;
-  font-size: 24px;
-}

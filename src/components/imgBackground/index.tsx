@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import styles from "./imgBackground.module.css";
 import Image from "next/image";
+import backgroundSmall from "@/imgs/background-small.png";
 
 export const ImgBackground = () => {
   const [bgData, setBgData] = useState<{
@@ -20,24 +21,29 @@ export const ImgBackground = () => {
 
   return (
     <>
-      {bgData ? (
-        <>
-          <div className={`${styles.backgroundImage}`}>
-            <Image
-              src={bgData.imageUrl}
-              alt={bgData.imageTitle}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-            <p>{bgData.imageTitle}</p>
-          </div>
-        </>
-      ) : (
-        <p>Carregando...</p>
-      )}
+      <div className={`${styles.backgroundImage}`}>
+        {bgData ? (
+          <Image
+            src={bgData.imageUrl}
+            alt={bgData.imageTitle}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        ) : (
+          <Image
+            src={backgroundSmall}
+            alt="Loading image"
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        )}
+      </div>
     </>
   );
 };
