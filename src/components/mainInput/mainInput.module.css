@@ -12,5 +12,6 @@
 .divInputMain {
   background-color: transparent;
   border-color: transparent;
+  outline: transparent;
   font-size: 24px;
 }
