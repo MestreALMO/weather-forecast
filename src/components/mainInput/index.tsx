@@ -26,7 +26,6 @@ export const MainInput = () => {
           placeholder="City, State/Province"
           value={`${ctxLocation.city}, ${ctxLocation.state}`}
         />
-        {coordinates.latitude}
       </div>
     </>
   );
