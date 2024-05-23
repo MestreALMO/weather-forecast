@@ -5,8 +5,10 @@ import { useCtxLocation } from "@/context/ctxLocation";
 import { useGetGeolocation } from "@/hooks/useGetGeolocation";
 
 export const MainInput = () => {
-  const { ctxLocation, setCtxLocation } = useCtxLocation();
+  //geolocation
   const { coordinates, error } = useGetGeolocation();
+  //city, state
+  const { ctxLocation, setCtxLocation } = useCtxLocation();
 
   return (
     <>
@@ -25,6 +27,7 @@ export const MainInput = () => {
           className={styles.divInputMain}
           placeholder="City, State/Province"
           value={`${ctxLocation.city}, ${ctxLocation.state}`}
+          onChange={() => {}}
         />
       </div>
     </>
