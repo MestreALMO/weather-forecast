@@ -10,21 +10,21 @@ import {
   useState,
 } from "react";
 
-interface Region {
+interface Location {
   city: string;
   state: string;
 }
 
-interface ctxRegionContextProps {
-  ctxRegion: Region;
-  setCtxRegion: Dispatch<SetStateAction<Region>>;
+interface ctxLocationContextProps {
+  ctxLocation: Location;
+  setCtxLocation: Dispatch<SetStateAction<Location>>;
 }
 
-const CtxRegionContext = createContext<ctxRegionContextProps>(
-  {} as ctxRegionContextProps
+const CtxLocationContext = createContext<ctxLocationContextProps>(
+  {} as ctxLocationContextProps
 );
 
-export default function CtxRegionProvider({
+export default function CtxLocationProvider({
   children,
 }: {
   children: ReactNode;
@@ -52,17 +52,17 @@ export default function CtxRegionProvider({
   const city = "Londres";
   const state = "Pallet";
 
-  const [ctxRegion, setCtxRegion] = useState({ city, state });
+  const [ctxLocation, setCtxLocation] = useState({ city, state });
 
   return (
-    <CtxRegionContext.Provider value={{ ctxRegion, setCtxRegion }}>
+    <CtxLocationContext.Provider value={{ ctxLocation, setCtxLocation }}>
       {children}
-    </CtxRegionContext.Provider>
+    </CtxLocationContext.Provider>
   );
 }
 
-export const useCtxRegion = () => {
-  const context = useContext(CtxRegionContext);
-  const { ctxRegion, setCtxRegion } = context;
-  return { ctxRegion, setCtxRegion };
+export const useCtxLocation = () => {
+  const context = useContext(CtxLocationContext);
+  const { ctxLocation, setCtxLocation } = context;
+  return { ctxLocation, setCtxLocation };
 };

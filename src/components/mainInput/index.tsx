@@ -1,12 +1,12 @@
 import styles from "./mainInput.module.css";
 import Image from "next/image";
 import IconCompass from "@/icons/iconCompass.svg";
-import { useEffect } from "react";
-import { useCtxRegion } from "@/context/ctxRegion";
+import { useCtxLocation } from "@/context/ctxLocation";
+import { useGetGeolocation } from "@/hooks/useGetGeolocation";
 
 export const MainInput = () => {
-  const Region = useCtxRegion();
-  console.log(Region);
+  const { ctxLocation, setCtxLocation } = useCtxLocation();
+  const { coordinates, error } = useGetGeolocation();
 
   return (
     <>
@@ -24,7 +24,9 @@ export const MainInput = () => {
         <input
           className={styles.divInputMain}
           placeholder="City, State/Province"
+          value={`${ctxLocation.city}, ${ctxLocation.state}`}
         />
+        {coordinates.latitude}
       </div>
     </>
   );
