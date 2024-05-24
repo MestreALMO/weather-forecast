@@ -2,11 +2,11 @@ import styles from "./mainInput.module.css";
 import Image from "next/image";
 import IconCompass from "@/icons/iconCompass.svg";
 import { useCtxLocation } from "@/context/ctxLocation";
-import { useGetGeolocation } from "@/hooks/useGetGeolocation";
+import { useGeolocation } from "@/hooks/useGeolocation";
 
 export const MainInput = () => {
   //geolocation
-  const { coordinates, error } = useGetGeolocation();
+  const { coordinates, errorGeolocation } = useGeolocation();
   //city, state
   const { ctxLocation, setCtxLocation } = useCtxLocation();
 

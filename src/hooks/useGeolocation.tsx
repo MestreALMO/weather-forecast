@@ -10,16 +10,17 @@ interface GeolocationPositionError {
   message: string;
 }
 
-export const useGetGeolocation = () => {
+export const useGeolocation = () => {
   const [coordinates, setCoordinates] = useState<Coordinates>({
     latitude: null,
     longitude: null,
   });
-  const [error, setError] = useState<GeolocationPositionError | null>(null);
+  const [errorGeolocation, setErrorGeolocation] =
+    useState<GeolocationPositionError | null>(null);
 
   useEffect(() => {
     if (!navigator.geolocation) {
-      setError({
+      setErrorGeolocation({
         code: 0,
         message: "Geolocation is not supported by your browser",
       });
@@ -32,7 +33,7 @@ export const useGetGeolocation = () => {
     };
 
     const handleError = (error: GeolocationPositionError) => {
-      setError(error);
+      setErrorGeolocation(error);
     };
 
     const geoOptions = {
@@ -51,5 +52,5 @@ export const useGetGeolocation = () => {
     return () => navigator.geolocation.clearWatch(watcher);
   }, []);
 
-  return { coordinates, error };
+  return { coordinates, errorGeolocation };
 };
