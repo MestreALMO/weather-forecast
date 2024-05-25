@@ -1,5 +1,7 @@
 "use client";
 
+import { useGeolocation } from "@/hooks/useGeolocation";
+import axios from "axios";
 import {
   Dispatch,
   ReactNode,
@@ -29,30 +31,27 @@ export default function CtxLocationProvider({
 }: {
   children: ReactNode;
 }) {
-  //Getting coordinates from browser
-  const [latitude, useLatitude] = useState(0);
-  const [longitude, useLongitude] = useState(0);
+  //geolocation
+  const { coordinates, errorGeolocation } = useGeolocation();
+  const [ctxLocation, setCtxLocation] = useState({ city: "", state: "" });
+
+  //Reverse Geolocation
   useEffect(() => {
-    function Coordinates() {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          useLatitude(position.coords.latitude);
-          useLongitude(position.coords.longitude);
+    async function api() {
+      const { data } = await axios.get("/api/reverseGeolocation", {
+        params: {
+          latitude: coordinates.latitude,
+          longitude: coordinates.longitude,
         },
-        (error) => {
-          // display an error if we cant get coordinates
-          console.error("Error getting user location:", error);
-        }
-      );
+      });
+      setCtxLocation({ city: data.city, state: data.state });
     }
-    Coordinates();
-  }, []);
 
-  //Transforming coordinates to city and state
-  const city = "Londres";
-  const state = "Pallet";
-
-  const [ctxLocation, setCtxLocation] = useState({ city, state });
+    //In case latitude not null run the function
+    if (coordinates.latitude) {
+      api();
+    }
+  }, [coordinates]);
 
   return (
     <CtxLocationContext.Provider value={{ ctxLocation, setCtxLocation }}>
