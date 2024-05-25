@@ -47,7 +47,7 @@ export default function CtxLocationProvider({
       setCtxLocation({ city: data.city, state: data.state });
     }
 
-    //In case latitude not null run the function
+    //In case latitude is not null run the function
     if (coordinates.latitude) {
       api();
     }
