@@ -2,10 +2,23 @@ import styles from "./mainInput.module.css";
 import Image from "next/image";
 import IconCompass from "@/icons/iconCompass.svg";
 import { useCtxLocation } from "@/context/ctxLocation";
+import { ChangeEvent, useEffect, useState } from "react";
 
 export const MainInput = () => {
   //city, state
   const { ctxLocation, setCtxLocation } = useCtxLocation();
+
+  //input initial state
+  const [inputvalue, setInputValue] = useState(``);
+  useEffect(() => {
+    if (ctxLocation) {
+      setInputValue(`${ctxLocation.city}, ${ctxLocation.state}`);
+    }
+  }, [ctxLocation]);
+
+  function HandleInputChange(e: ChangeEvent<HTMLInputElement>) {
+    setInputValue(e.target.value);
+  }
 
   return (
     <>
@@ -23,8 +36,8 @@ export const MainInput = () => {
         <input
           className={styles.divInputMain}
           placeholder="City, State/Province"
-          value={`${ctxLocation.city}, ${ctxLocation.state}`}
-          onChange={() => {}}
+          value={inputvalue}
+          onChange={HandleInputChange}
         />
       </div>
     </>
