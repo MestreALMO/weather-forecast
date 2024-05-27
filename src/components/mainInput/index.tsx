@@ -14,7 +14,7 @@ export const MainInput = () => {
     if (ctxLocation) {
       setInputValue(`${ctxLocation.city}, ${ctxLocation.state}`);
 
-      inputvalue === ", " || setInputValue("");
+      inputvalue === ", " ?? setInputValue("");
     }
   }, [ctxLocation]);
 
