@@ -1,0 +1,5 @@
+.divMainTW {
+  background-color: var(--clrInputBackground);
+  display: flex;
+  padding: 14px 10px;
+}

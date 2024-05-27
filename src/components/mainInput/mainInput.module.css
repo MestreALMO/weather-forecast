@@ -1,18 +1,34 @@
-.divInput {
-  background-color: var(--inputBackgroundClr);
+.mainInput {
+  background-color: var(--clrInputBackground);
   display: flex;
   padding: 14px 10px;
+  min-width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
-.divInputIcon {
-  max-height: 40px;
+.mainInputIcon {
+  max-width: 50px;
   padding-right: 10px;
 }
 
-.divInputMain {
+.mainInputInput {
   background-color: transparent;
   border-color: transparent;
   outline: transparent;
   font-size: 24px;
-  min-width: 350px;
+  width: 100%;
+  max-width: 100%;
+  /* min-width: 350px; */
+}
+
+@media (max-width: 600px) {
+  .mainInputIcon {
+    max-width: 36px;
+    padding-right: 10px;
+  }
+
+  .mainInputInput {
+    font-size: 18px;
+    max-width: 100%;
+  }
 }

@@ -1,8 +1,15 @@
-.main {
+.mainPage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+
+.mainPageData {
+  min-width: 320px;
+  max-width: 450px;
+  width: 100%;
+  padding: 0 8px;
 }

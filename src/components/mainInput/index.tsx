@@ -13,6 +13,8 @@ export const MainInput = () => {
   useEffect(() => {
     if (ctxLocation) {
       setInputValue(`${ctxLocation.city}, ${ctxLocation.state}`);
+
+      inputvalue === ", " || setInputValue("");
     }
   }, [ctxLocation]);
 
@@ -22,9 +24,9 @@ export const MainInput = () => {
 
   return (
     <>
-      <div className={styles.divInput}>
+      <div className={styles.mainInput}>
         <Image
-          className={styles.divInputIcon}
+          className={styles.mainInputIcon}
           alt="Compass icon"
           src={IconCompass}
           sizes="100vw"
@@ -34,7 +36,7 @@ export const MainInput = () => {
           }}
         />
         <input
-          className={styles.divInputMain}
+          className={styles.mainInputInput}
           placeholder="City, State/Province"
           value={inputvalue}
           onChange={HandleInputChange}
