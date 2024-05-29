@@ -1,4 +1,4 @@
-import styles from "./mainInput.module.css";
+import styles from "./inputMain.module.css";
 import Image from "next/image";
 import IconCompass from "@/icons/iconCompass.svg";
 import { useCtxLocation } from "@/context/ctxLocation";
