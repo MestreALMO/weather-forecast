@@ -1,0 +1,9 @@
+.iconTodaysWeather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconTodaysWeather img {
+  max-width: 100%;
+}

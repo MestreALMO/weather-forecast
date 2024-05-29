@@ -12,16 +12,19 @@
   background-color: var(--clrTodayBackgroundBlue);
 }
 
-.todaysClrYellow {
-  background-color: var(--clrTodayBackgroundYellow);
-}
-
 .todaysClrRed {
   background-color: var(--clrTodayBackgroundRed);
+}
+
+.todaysClrYellow {
+  background-color: var(--clrTodayBackgroundYellow);
 }
 
 /* todaysWeatherIcon {
 } */
 
-/* .todaysWeatherData {
-} */
+.todaysWeatherData {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}

@@ -4,6 +4,7 @@ import { useCtxLocation } from "@/context/ctxLocation";
 import styles from "./todaysWeather.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { IconTodaysWeather } from "../iconTodaysWeather";
 
 interface weatheDataProps {
   temperature: number;
@@ -38,7 +39,6 @@ export const TodaysWeather = () => {
     if (ctxLocation.city) {
       api();
     }
-    console.log(weatherData);
   }, [ctxLocation]);
 
   return (
@@ -47,14 +47,18 @@ export const TodaysWeather = () => {
         className={`${styles.todaysWeather}  ${
           weatherData.temperature < 15
             ? styles.todaysClrBlue
-            : weatherData.temperature <= 35
-            ? styles.todaysClrYellow
-            : styles.todaysClrRed
+            : weatherData.temperature > 35
+            ? styles.todaysClrRed
+            : styles.todaysClrYellow
         }`}
       >
-        <div className={styles.todaysWeatherIcon}>Image</div>
+        <div className={styles.todaysWeatherIcon}>
+          <IconTodaysWeather
+            weatherDescription={weatherData.weatherDescription}
+          />
+        </div>
         <div className={`${styles.todaysWeatherData}`}>
-          <p>Today</p>
+          <p>TODAY</p>
           <p>{weatherData.temperature}ºC</p>
           <p>{weatherData.weatherDescription}</p>
           <p>{weatherData.windSpeed}km/h</p>
