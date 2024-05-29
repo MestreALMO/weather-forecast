@@ -2,4 +2,26 @@
   background-color: var(--clrInputBackground);
   display: flex;
   padding: 14px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  color: #fff;
 }
+
+.todaysClrBlue {
+  background-color: var(--clrTodayBackgroundBlue);
+}
+
+.todaysClrYellow {
+  background-color: var(--clrTodayBackgroundYellow);
+}
+
+.todaysClrRed {
+  background-color: var(--clrTodayBackgroundRed);
+}
+
+/* todaysWeatherIcon {
+} */
+
+/* .todaysWeatherData {
+} */
