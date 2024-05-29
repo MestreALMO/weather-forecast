@@ -4,7 +4,7 @@ import IconCompass from "@/icons/iconCompass.svg";
 import { useCtxLocation } from "@/context/ctxLocation";
 import { ChangeEvent, useEffect, useState } from "react";
 
-export const MainInput = () => {
+export const InputMain = () => {
   //city, state
   const { ctxLocation, setCtxLocation } = useCtxLocation();
 
@@ -12,9 +12,9 @@ export const MainInput = () => {
   const [inputvalue, setInputValue] = useState(``);
   useEffect(() => {
     if (ctxLocation) {
-      setInputValue(`${ctxLocation.city}, ${ctxLocation.state}`);
-
-      inputvalue === ", " ?? setInputValue("");
+      `${ctxLocation.city}, ${ctxLocation.state}` !== ", "
+        ? setInputValue(`${ctxLocation.city}, ${ctxLocation.state}`)
+        : setInputValue("");
     }
   }, [ctxLocation]);
 
