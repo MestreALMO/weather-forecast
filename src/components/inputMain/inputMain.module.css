@@ -7,7 +7,7 @@
 }
 
 .mainInputIcon {
-  max-width: 50px;
+  max-width: 36px;
   padding-right: 10px;
 }
 
@@ -15,19 +15,17 @@
   background-color: transparent;
   border-color: transparent;
   outline: transparent;
-  font-size: 24px;
+  font-size: 18px;
   width: 100%;
   max-width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .mainInputIcon {
-    max-width: 36px;
-    padding-right: 10px;
+    max-width: 50px;
   }
 
   .mainInputInput {
-    font-size: 18px;
-    max-width: 100%;
+    font-size: 24px;
   }
 }

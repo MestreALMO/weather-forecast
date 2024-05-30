@@ -44,7 +44,7 @@ export const WeatherToday = () => {
   return (
     <>
       <div
-        className={`${styles.todaysWeather}  ${
+        className={`${styles.weatherToday}  ${
           weatherData.temperature < 15
             ? styles.todaysClrBlue
             : weatherData.temperature > 35
@@ -52,13 +52,17 @@ export const WeatherToday = () => {
             : styles.todaysClrYellow
         }`}
       >
-        <div className={styles.todaysWeatherIcon}>
+        <div className={styles.weatherTodayIcon}>
           <WeatherIcon weatherDescription={weatherData.weatherDescription} />
         </div>
-        <div className={`${styles.todaysWeatherData}`}>
-          <p>TODAY</p>
-          <p>{weatherData.temperature}ºC</p>
-          <p>{weatherData.weatherDescription}</p>
+        <div className={`${styles.weatherTodayData}`}>
+          <p className={`${styles.weatherTodayDataToday}`}>TODAY</p>
+          <p className={`${styles.weatherTodayDataTemperature}`}>
+            {weatherData.temperature}ºC
+          </p>
+          <p className={`${styles.weatherTodayDataDescription}`}>
+            {weatherData.weatherDescription}
+          </p>
           <p>{weatherData.windSpeed}km/h</p>
           <p>{weatherData.humidity}%</p>
           <p>{weatherData.pressure}hPA</p>
