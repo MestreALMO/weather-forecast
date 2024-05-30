@@ -5,15 +5,15 @@
 
   --clrInputBackground: rgb(255, 255, 255, 0.9);
 
-  --clrTodayBackgroundRed: rgb(255, 0, 0, 0.8);
+  --clrTodayBackgroundRed: rgb(255, 0, 0, 0.9);
   --clrTomorrowBackgroundRed: rgb(255, 0, 102, 0.9);
   --clrAfterTomorrowBackgroundRed: rgb(204, 0, 0, 0.9);
 
-  --clrTodayBackgroundYellow: rgb(255, 180, 0, 0.8);
+  --clrTodayBackgroundYellow: rgb(255, 180, 0, 0.9);
   --clrTomorrowBackgroundYellow: rgb(255, 180, 102, 0.9);
   --clrAfterTomorrowBackgroundYellow: rgb(204, 180, 0, 0.9);
 
-  --clrTodayBackgroundBlue: rgb(0, 255, 255, 0.8);
+  --clrTodayBackgroundBlue: rgb(0, 255, 255, 0.9);
   --clrTomorrowBackgroundBlue: rgb(102, 255, 255, 0.9);
   --clrAfterTomorrowBackgroundBlue: rgb(0, 204, 204, 0.9);
 }
