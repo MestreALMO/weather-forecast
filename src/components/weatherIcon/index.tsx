@@ -1,4 +1,4 @@
-import styles from "./iconTodaysWeather.module.css";
+import styles from "./weatherIcon.module.css";
 import Image from "next/image";
 import Clear from "@/imgs/weatherIcons/clear.svg";
 import Clouds from "@/imgs/weatherIcons/clouds.svg";
@@ -15,14 +15,12 @@ interface IconTodaysWeatherProps {
   weatherDescription: string;
 }
 
-export const IconTodaysWeather = ({
-  weatherDescription,
-}: IconTodaysWeatherProps) => {
+export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
   //Returns the icon acoording with weatherDescription
   switch (weatherDescription) {
     case "Clouds":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Clouds} alt={weatherDescription} width={150} />
         </div>
@@ -30,7 +28,7 @@ export const IconTodaysWeather = ({
       break;
     case "Drizzle":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Drizzle} alt={weatherDescription} width={150} />
         </div>
@@ -38,7 +36,7 @@ export const IconTodaysWeather = ({
       break;
     case "Dust":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={DustSandAsh} alt={weatherDescription} width={150} />
         </div>
@@ -46,7 +44,7 @@ export const IconTodaysWeather = ({
       break;
     case "Sand":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={DustSandAsh} alt={weatherDescription} width={150} />
         </div>
@@ -54,7 +52,7 @@ export const IconTodaysWeather = ({
       break;
     case "Ash":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={DustSandAsh} alt={weatherDescription} width={150} />
         </div>
@@ -62,7 +60,7 @@ export const IconTodaysWeather = ({
       break;
     case "Mist":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={MistHazeFog} alt={weatherDescription} width={150} />
         </div>
@@ -70,7 +68,7 @@ export const IconTodaysWeather = ({
       break;
     case "Haze":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={MistHazeFog} alt={weatherDescription} width={150} />
         </div>
@@ -78,7 +76,7 @@ export const IconTodaysWeather = ({
       break;
     case "Fog":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={MistHazeFog} alt={weatherDescription} width={150} />
         </div>
@@ -86,7 +84,7 @@ export const IconTodaysWeather = ({
       break;
     case "Rain":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Rain} alt={weatherDescription} width={150} />
         </div>
@@ -94,7 +92,7 @@ export const IconTodaysWeather = ({
       break;
     case "Smoke":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Smoke} alt={weatherDescription} width={150} />
         </div>
@@ -102,7 +100,7 @@ export const IconTodaysWeather = ({
       break;
     case "Snow":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Snow} alt={weatherDescription} width={150} />
         </div>
@@ -110,7 +108,7 @@ export const IconTodaysWeather = ({
       break;
     case "Thunderstorm":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image
             src={ThunderstormSquall}
@@ -122,7 +120,7 @@ export const IconTodaysWeather = ({
       break;
     case "Squall":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image
             src={ThunderstormSquall}
@@ -134,7 +132,7 @@ export const IconTodaysWeather = ({
       break;
     case "Tornado":
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Tornado} alt={weatherDescription} width={150} />
         </div>
@@ -142,7 +140,7 @@ export const IconTodaysWeather = ({
       break;
     default: //Clear or others
       return (
-        <div className={styles.iconTodaysWeather}>
+        <div className={styles.weatherIconWeather}>
           {}
           <Image src={Clear} alt={weatherDescription} width={150} />
         </div>

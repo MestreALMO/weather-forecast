@@ -1,10 +1,10 @@
 "use client";
 
 import { useCtxLocation } from "@/context/ctxLocation";
-import styles from "./todaysWeather.module.css";
+import styles from "./weatherToday.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { IconTodaysWeather } from "../iconTodaysWeather";
+import { WeatherIcon } from "../weatherIcon";
 
 interface weatheDataProps {
   temperature: number;
@@ -14,7 +14,7 @@ interface weatheDataProps {
   pressure: number;
 }
 
-export const TodaysWeather = () => {
+export const WeatherToday = () => {
   //city, state
   const { ctxLocation } = useCtxLocation();
   const [weatherData, setWeatherData] = useState<weatheDataProps>(
@@ -53,9 +53,7 @@ export const TodaysWeather = () => {
         }`}
       >
         <div className={styles.todaysWeatherIcon}>
-          <IconTodaysWeather
-            weatherDescription={weatherData.weatherDescription}
-          />
+          <WeatherIcon weatherDescription={weatherData.weatherDescription} />
         </div>
         <div className={`${styles.todaysWeatherData}`}>
           <p>TODAY</p>

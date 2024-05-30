@@ -3,7 +3,7 @@
 import { InputMain } from "@/components/inputMain";
 import styles from "./page.module.css";
 import { ImgBackground } from "@/components/imgBackground";
-import { TodaysWeather } from "@/components/todaysWeather";
+import { WeatherToday } from "@/components/weatherToday";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <ImgBackground />
       <div className={styles.mainPageData}>
         <InputMain />
-        <TodaysWeather />
+        <WeatherToday />
       </div>
     </main>
   );

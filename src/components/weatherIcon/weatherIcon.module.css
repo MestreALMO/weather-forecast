@@ -1,9 +1,9 @@
-.iconTodaysWeather {
+.weatherIconWeather {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.iconTodaysWeather img {
+.weatherIconWeather img {
   max-width: 100%;
 }
