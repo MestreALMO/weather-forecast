@@ -1,0 +1,7 @@
+.weatherTomorrow {
+  padding: 10px;
+}
+
+.weatherTomorrowBkgYellow {
+  background-color: var(--clrTomorrowBackgroundYellow);
+}

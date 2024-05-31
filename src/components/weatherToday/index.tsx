@@ -46,10 +46,10 @@ export const WeatherToday = () => {
       <div
         className={`${styles.weatherToday}  ${
           weatherData.temperature < 15
-            ? styles.todaysClrBlue
+            ? styles.weatherTodayBkgBlue
             : weatherData.temperature > 35
-            ? styles.todaysClrRed
-            : styles.todaysClrYellow
+            ? styles.weatherTodayBkgRed
+            : styles.weatherTodayBkgYellow
         }`}
       >
         <div className={styles.weatherTodayIcon}>

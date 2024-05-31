@@ -5,15 +5,15 @@
   color: var(--background);
 }
 
-.todaysClrBlue {
+.weatherTodayBkgBlue {
   background-color: var(--clrTodayBackgroundBlue);
 }
 
-.todaysClrRed {
+.weatherTodayBkgRed {
   background-color: var(--clrTodayBackgroundRed);
 }
 
-.todaysClrYellow {
+.weatherTodayBkgYellow {
   background-color: var(--clrTodayBackgroundYellow);
 }
 

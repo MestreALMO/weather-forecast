@@ -4,6 +4,7 @@ import { InputMain } from "@/components/inputMain";
 import styles from "./page.module.css";
 import { ImgBackground } from "@/components/imgBackground";
 import { WeatherToday } from "@/components/weatherToday";
+import { WeatherTomorrow } from "@/components/weatherTomorrow";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div className={styles.mainPageData}>
         <InputMain />
         <WeatherToday />
+        <WeatherTomorrow />
       </div>
     </main>
   );

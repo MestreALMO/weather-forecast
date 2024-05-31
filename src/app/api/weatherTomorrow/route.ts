@@ -14,10 +14,10 @@ export async function GET(request: Request) {
   }
 
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&appid=${apiKey}&units=metric`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city},${state}&appid=${apiKey}&units=metric`
   );
 
-  if (!response.ok) {
+  https: if (!response.ok) {
     return NextResponse.json(
       { error: "Failed to fetch weather data" },
       { status: response.status }
@@ -26,17 +26,8 @@ export async function GET(request: Request) {
 
   const weatherData = await response.json();
 
-  const temperature = weatherData.main.temp;
-  const weatherDescription = weatherData.weather[0].main;
-  const windSpeed = weatherData.wind.speed;
-  const humidity = weatherData.main.humidity;
-  const pressure = weatherData.main.pressure;
+  const temperatureTomorrow = weatherData.list[1].main.temp;
+  const temperatureAfterTomorrow = weatherData.list[2].main.temp;
 
-  return NextResponse.json({
-    temperature,
-    weatherDescription,
-    windSpeed,
-    humidity,
-    pressure,
-  });
+  return NextResponse.json({ temperatureTomorrow, temperatureAfterTomorrow });
 }
