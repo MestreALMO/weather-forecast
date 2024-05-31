@@ -3,10 +3,17 @@ import styles from "./weatherTomorrow.module.css";
 import axios from "axios";
 import { useCtxLocation } from "@/context/ctxLocation";
 
+interface WeatherDataProps {
+  temperatureTomorrow: number;
+  temperatureAfterTomorrow: number;
+}
+
 export const WeatherTomorrow = () => {
   //city, state
   const { ctxLocation } = useCtxLocation();
-  const [weatherData, setWeatherData] = useState();
+  const [weatherData, setWeatherData] = useState<WeatherDataProps>(
+    {} as WeatherDataProps
+  );
 
   //API
   useEffect(() => {
@@ -33,9 +40,34 @@ export const WeatherTomorrow = () => {
   return (
     <>
       <div
-        className={`${styles.weatherTomorrow} ${styles.weatherTomorrowBkgYellow}`}
+        className={`${styles.weatherTomorrow} ${
+          weatherData.temperatureTomorrow < 15
+            ? styles.weatherTomorrowBkgBlue
+            : weatherData.temperatureTomorrow > 35
+            ? styles.weatherTomorrowBkgRed
+            : styles.weatherTomorrowBkgYellow
+        }`}
       >
-        <p>Tomorrow</p>
+        <div className={styles.weatherTomorrowImg} />
+        <div className={styles.weatherTomorrowData}>
+          <p>TOMORROW</p>
+          <p>{weatherData?.temperatureTomorrow}°C</p>
+        </div>
+      </div>
+      <div
+        className={`${styles.weatherTomorrow} ${styles.weatherAfterTomorrow} ${
+          weatherData.temperatureAfterTomorrow < 15
+            ? styles.weatherAfterTomorrowBkgBlue
+            : weatherData.temperatureAfterTomorrow > 35
+            ? styles.weatherAfterTomorrowBkgRed
+            : styles.weatherAfterTomorrowBkgYellow
+        }`}
+      >
+        <div className={styles.weatherTomorrowImg} />
+        <div className={styles.weatherTomorrowData}>
+          <p>TOMORROW</p>
+          <p>{weatherData?.temperatureTomorrow}°C</p>
+        </div>
       </div>
     </>
   );

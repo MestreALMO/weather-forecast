@@ -63,9 +63,11 @@ export const WeatherToday = () => {
           <p className={`${styles.weatherTodayDataDescription}`}>
             {weatherData.weatherDescription}
           </p>
-          <p>{weatherData.windSpeed}km/h</p>
-          <p>{weatherData.humidity}%</p>
-          <p>{weatherData.pressure}hPA</p>
+          <div className={styles.weatherTodayDataNamed}>
+            <p>Wind: {weatherData.windSpeed}km/h</p>
+            <p>Humidity: {weatherData.humidity}%</p>
+            <p>Pressure: {weatherData.pressure}hPA</p>
+          </div>
         </div>
       </div>
     </>

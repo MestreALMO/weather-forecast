@@ -18,16 +18,20 @@
 }
 
 .weatherTodayIcon {
-  padding: 24px;
+  padding: 24px 0;
   width: 100%;
 }
 
 .weatherTodayData {
-  padding: 18px 4px;
+  padding: 18px 0;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.weatherTodayDataToday {
+  font-size: 18px;
 }
 
 .weatherTodayDataTemperature {
@@ -37,8 +41,27 @@
 
 .weatherTodayDataDescription {
   padding-bottom: 6px;
-  font-size: 20px;
+  font-size: 22px;
+}
+
+.weatherTodayDataNamed {
+  font-size: 16px;
 }
 
 @media (min-width: 600px) {
+  .weatherTodayDataToday {
+    font-size: 22px;
+  }
+
+  .weatherTodayDataTemperature {
+    font-size: 24px;
+  }
+
+  .weatherTodayDataDescription {
+    font-size: 26px;
+  }
+
+  .weatherTodayDataNamed {
+    font-size: 20px;
+  }
 }

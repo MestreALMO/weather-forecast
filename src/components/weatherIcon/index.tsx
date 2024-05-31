@@ -15,6 +15,8 @@ interface IconTodaysWeatherProps {
   weatherDescription: string;
 }
 
+const IconSize = 130;
+
 export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
   //Returns the icon acoording with weatherDescription
   switch (weatherDescription) {
@@ -22,7 +24,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Clouds} alt={weatherDescription} width={150} />
+          <Image src={Clouds} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -30,7 +32,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Drizzle} alt={weatherDescription} width={150} />
+          <Image src={Drizzle} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -38,7 +40,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={DustSandAsh} alt={weatherDescription} width={150} />
+          <Image src={DustSandAsh} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -46,7 +48,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={DustSandAsh} alt={weatherDescription} width={150} />
+          <Image src={DustSandAsh} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -54,7 +56,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={DustSandAsh} alt={weatherDescription} width={150} />
+          <Image src={DustSandAsh} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -62,7 +64,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={MistHazeFog} alt={weatherDescription} width={150} />
+          <Image src={MistHazeFog} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -70,7 +72,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={MistHazeFog} alt={weatherDescription} width={150} />
+          <Image src={MistHazeFog} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -78,7 +80,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={MistHazeFog} alt={weatherDescription} width={150} />
+          <Image src={MistHazeFog} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -86,7 +88,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Rain} alt={weatherDescription} width={150} />
+          <Image src={Rain} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -94,7 +96,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Smoke} alt={weatherDescription} width={150} />
+          <Image src={Smoke} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -102,7 +104,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Snow} alt={weatherDescription} width={150} />
+          <Image src={Snow} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -113,7 +115,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
           <Image
             src={ThunderstormSquall}
             alt={weatherDescription}
-            width={150}
+            width={IconSize}
           />
         </div>
       );
@@ -125,7 +127,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
           <Image
             src={ThunderstormSquall}
             alt={weatherDescription}
-            width={150}
+            width={IconSize}
           />
         </div>
       );
@@ -134,7 +136,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Tornado} alt={weatherDescription} width={150} />
+          <Image src={Tornado} alt={weatherDescription} width={IconSize} />
         </div>
       );
       break;
@@ -142,7 +144,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
       return (
         <div className={styles.weatherIconWeather}>
           {}
-          <Image src={Clear} alt={weatherDescription} width={150} />
+          <Image src={Clear} alt={weatherDescription} width={IconSize} />
         </div>
       );
   }

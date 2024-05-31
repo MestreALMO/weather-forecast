@@ -1,7 +1,49 @@
 .weatherTomorrow {
   padding: 10px;
+  display: flex;
+  color: var(--background);
+  padding-bottom: 18px;
+  font-size: 18px;
+}
+
+.weatherAfterTomorrow {
+  border-radius: 0 0 10px 10px;
 }
 
 .weatherTomorrowBkgYellow {
   background-color: var(--clrTomorrowBackgroundYellow);
+}
+
+.weatherTomorrowBkgBlue {
+  background-color: var(--clrTomorrowBackgroundBlue);
+}
+
+.weatherTomorrowBkgRed {
+  background-color: var(--clrTomorrowBackgroundRed);
+}
+
+.weatherAfterTomorrowBkgYellow {
+  background-color: var(--clrAfterTomorrowBackgroundYellow);
+}
+
+.weatherAfterTomorrowBkgBlue {
+  background-color: var(--clrAfterTomorrowBackgroundBlue);
+}
+
+.weatherAfterTomorrowBkgRed {
+  background-color: var(--clrAfterTomorrowBackgroundRed);
+}
+
+.weatherTomorrowImg {
+  width: 100%;
+}
+
+.weatherTomorrowData {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .weatherTomorrow {
+    font-size: 22px;
+  }
 }
