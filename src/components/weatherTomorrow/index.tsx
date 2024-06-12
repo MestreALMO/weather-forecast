@@ -33,8 +33,6 @@ export const WeatherTomorrow = () => {
     if (ctxLocation.city) {
       api();
     }
-
-    console.log(weatherData);
   }, [ctxLocation]);
 
   return (

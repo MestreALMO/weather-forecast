@@ -24,7 +24,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Clouds":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Clouds}
             alt={weatherDescription}
@@ -37,7 +36,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Drizzle":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Drizzle}
             alt={weatherDescription}
@@ -50,7 +48,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Dust":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={DustSandAsh}
             alt={weatherDescription}
@@ -63,7 +60,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Sand":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={DustSandAsh}
             alt={weatherDescription}
@@ -76,7 +72,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Ash":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={DustSandAsh}
             alt={weatherDescription}
@@ -89,7 +84,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Mist":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={MistHazeFog}
             alt={weatherDescription}
@@ -102,7 +96,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Haze":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={MistHazeFog}
             alt={weatherDescription}
@@ -115,7 +108,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Fog":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={MistHazeFog}
             alt={weatherDescription}
@@ -128,7 +120,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Rain":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Rain}
             alt={weatherDescription}
@@ -141,7 +132,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Smoke":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Smoke}
             alt={weatherDescription}
@@ -154,7 +144,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Snow":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Snow}
             alt={weatherDescription}
@@ -167,7 +156,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Thunderstorm":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={ThunderstormSquall}
             alt={weatherDescription}
@@ -180,7 +168,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Squall":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={ThunderstormSquall}
             alt={weatherDescription}
@@ -193,7 +180,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     case "Tornado":
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Tornado}
             alt={weatherDescription}
@@ -206,7 +192,6 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
     default: //Clear or others
       return (
         <div className={styles.weatherIconWeather}>
-          {}
           <Image
             src={Clear}
             alt={weatherDescription}
