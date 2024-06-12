@@ -26,7 +26,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Clouds}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -38,7 +38,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Drizzle}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -50,7 +50,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={DustSandAsh}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -62,7 +62,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={DustSandAsh}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -74,7 +74,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={DustSandAsh}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -86,7 +86,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={MistHazeFog}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -98,7 +98,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={MistHazeFog}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -110,7 +110,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={MistHazeFog}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -122,7 +122,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Rain}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -134,7 +134,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Smoke}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -146,7 +146,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Snow}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -158,7 +158,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={ThunderstormSquall}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -170,7 +170,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={ThunderstormSquall}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -182,7 +182,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Tornado}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
@@ -194,7 +194,7 @@ export const WeatherIcon = ({ weatherDescription }: IconTodaysWeatherProps) => {
         <div className={styles.weatherIconWeather}>
           <Image
             src={Clear}
-            alt={weatherDescription}
+            alt={`${weatherDescription} icon`}
             width={iconWidth}
             height={iconHeight}
           />
