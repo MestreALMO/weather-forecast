@@ -2,7 +2,7 @@ import styles from "./inputMain.module.css";
 import Image from "next/image";
 import IconCompass from "@/icons/iconCompass.svg";
 import { useCtxLocation } from "@/context/ctxLocation";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
 export const InputMain = () => {
   //city, state
@@ -22,9 +22,16 @@ export const InputMain = () => {
     setInputValue(e.target.value);
   }
 
+  function HandleInputSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const [city, state] = inputvalue.split(", ");
+    setCtxLocation({ city: city, state: state });
+  }
+
   return (
     <>
-      <div className={styles.mainInput}>
+      <form className={styles.mainInput} onSubmit={HandleInputSubmit}>
         <Image
           className={styles.mainInputIcon}
           alt="Compass icon"
@@ -41,7 +48,7 @@ export const InputMain = () => {
           value={inputvalue}
           onChange={HandleInputChange}
         />
-      </div>
+      </form>
     </>
   );
 };

@@ -20,10 +20,8 @@ export const WeatherTomorrow = () => {
     async function api() {
       const { data } = await axios.get("/api/weatherTomorrow", {
         params: {
-          city: "Fortaleza",
-          state: "Ceará",
-          // city: ctxLocation.city,
-          // state: ctxLocation.state,
+          city: ctxLocation.city,
+          state: ctxLocation.state,
         },
       });
       setWeatherData(data);
