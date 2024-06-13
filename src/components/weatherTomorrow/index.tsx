@@ -47,7 +47,7 @@ export const WeatherTomorrow = () => {
         <div className={styles.weatherTomorrowImg} />
         <div className={styles.weatherTomorrowData}>
           <p>TOMORROW</p>
-          <p>{weatherData?.temperatureTomorrow}°C</p>
+          <p>{weatherData.temperatureTomorrow}°C</p>
         </div>
       </div>
       <div
@@ -61,8 +61,8 @@ export const WeatherTomorrow = () => {
       >
         <div className={styles.weatherTomorrowImg} />
         <div className={styles.weatherTomorrowData}>
-          <p>TOMORROW</p>
-          <p>{weatherData?.temperatureTomorrow}°C</p>
+          <p>AFTER TOMORROW</p>
+          <p>{weatherData.temperatureAfterTomorrow}°C</p>
         </div>
       </div>
     </>

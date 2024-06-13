@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./imgBackground.module.css";
 import Image from "next/image";
 import backgroundSmall from "@/imgs/background-small.png";

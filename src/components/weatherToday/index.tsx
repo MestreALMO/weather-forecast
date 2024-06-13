@@ -5,6 +5,7 @@ import styles from "./weatherToday.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherIcon } from "../weatherIcon";
+import { useCtxFahrenheit } from "@/context/ctxFahrenheit";
 
 interface weatheDataProps {
   temperature: number;
@@ -15,11 +16,12 @@ interface weatheDataProps {
 }
 
 export const WeatherToday = () => {
-  //city, state
   const { ctxLocation } = useCtxLocation();
   const [weatherData, setWeatherData] = useState<weatheDataProps>(
     {} as weatheDataProps
   );
+  const { ctxFahrenheit } = useCtxFahrenheit();
+  const [temperature, setTemperature] = useState(weatherData.temperature);
 
   //API
   useEffect(() => {
@@ -39,6 +41,20 @@ export const WeatherToday = () => {
     }
   }, [ctxLocation]);
 
+  //Temperature
+  useEffect(() => {
+    setTemperature(weatherData.temperature);
+  }, [weatherData]);
+  //Celsius to F
+  useEffect(() => {
+    if (ctxFahrenheit) {
+      const fTemp = Number(((weatherData.temperature * 9) / 5 + 32).toFixed(2));
+      setTemperature(fTemp);
+    } else {
+      setTemperature(weatherData.temperature);
+    }
+  }, [ctxFahrenheit, weatherData]);
+
   return (
     <>
       <div
@@ -56,7 +72,7 @@ export const WeatherToday = () => {
         <div className={`${styles.weatherTodayData}`}>
           <p className={`${styles.weatherTodayDataToday}`}>TODAY</p>
           <p className={`${styles.weatherTodayDataTemperature}`}>
-            {weatherData.temperature}ºC
+            {temperature}º{ctxFahrenheit ? "F" : "C"}
           </p>
           <p className={`${styles.weatherTodayDataDescription}`}>
             {weatherData.weatherDescription}
