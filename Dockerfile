@@ -1,39 +1,39 @@
-# Etapa 1: Build application
+# Stage 1: Build application
 FROM node:18-alpine AS builder
 
-# Define work diretory of conteiner
+# Set working directory
 WORKDIR /app
 
-# copy package.json and package-lock.json to install dependencys
+# Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
-# Install project dependencys
+# Install project dependencies
 RUN npm install
 
-# Copy all file to work diretory
+# Copy all files to the working directory
 COPY . .
 
-# run build of application
+# Run build of the application
 RUN npm run build
 
-# Etapa 2: config server
+# Stage 2: Configure server
 FROM node:18-alpine AS runner
 
-# Definework diretory inside container
+# Set working directory inside container
 WORKDIR /app
 
-# Copy installed dependence and build aplication of last stage
+# Copy installed dependencies and build application from the last stage
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package.json ./package.json
 
-# Define variables
+# Set environment variables
 ENV NODE_ENV=production
 ENV OPENCAGE_API_KEY=${OPENCAGE_API_KEY}
 ENV OPENWEATHERMAP_API_KEY=${OPENWEATHERMAP_API_KEY}
 
-# Port of aplication that will be used
+# Expose application port
 EXPOSE 3000
 
-# Comand to start aplication
+# Command to start application
 CMD ["npm", "start"]
