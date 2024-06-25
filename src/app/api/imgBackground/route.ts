@@ -16,8 +16,7 @@ export async function GET(request: Request) {
 
       // Extract desired info
       const imageUrl = `https://www.bing.com${imageData.url}`;
-      const imageTitle = `https://www.bing.com${imageData.url}`;
-      // const imageTitle = imageData.title;
+      const imageTitle = imageData.title;
 
       // Return data as JSON
       return Response.json({ imageUrl, imageTitle });
